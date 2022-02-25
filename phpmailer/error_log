@@ -1,0 +1,1 @@
+[16-May-2021 23:00:25 America/Chicago] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home3/sumanoj/tidyquant/phpmailer/get_oauth_token.php on line 32

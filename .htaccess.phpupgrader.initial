@@ -1,0 +1,22 @@
+
+RewriteEngine On
+
+RewriteCond %{HTTPS} !=on
+
+
+
+
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+RewriteCond %{HTTPS} off
+
+</IfModule>
+Header set content-Security-Policy: upgrade-insecure-requests 
+RewriteOptions inherit
+# Always use https for secure connections
+# Replace 'www.example.com' with your domain name
+# (as it appears on your SSL certificate)
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+

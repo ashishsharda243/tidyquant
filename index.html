@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Tidyquant - A Big Data Company </title>
+  <link rel="icon" href="images/favicon.png">
+  <meta name="description"
+    content="Let us tidy up your Big Data and unleash the power of Analytics. We develop and deploy scalable data solutions equipped with machine learning and data science capabilities">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '416609728942990');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=416609728942990&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120729298-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-120729298-1');
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/ionicons.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!------ Include the above in your HEAD tag ---------->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+
+.post{
+    font-family: "Poppins",sans-serif;
+}
+.post p{
+    font-size: 14px;
+}
+.post button{
+    padding: 5px 8px;
+    background-color: #e0ffff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    /* font-weight: 700; */
+}
+
+
+
+ .service-img {
+      margin-top: 30px;
+    }
+
+    .wrap {
+      display: flex;
+      background: white;
+      padding: 1rem 1rem 1rem 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 7px 7px 30px -5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .wrap:hover {
+      transform: scale(1.05);
+    }
+
+    .ico-wrap {
+      margin: auto;
+    }
+
+    .mbr-iconfont {
+      font-size: 4.5rem !important;
+      color: #313131;
+      margin: 1rem;
+      padding-right: 2.5rem;
+    }
+
+    .vcenter {
+      margin: auto;
+    }
+
+    .mbr-section-title3 {
+      text-align: left;
+    }
+
+
+    .display-5 {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 1.4rem;
+    }
+
+    .mbr-bold {
+      font-weight: 700;
+    }
+
+
+    .display-6 {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 1rem
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="images/logo.png" alt="Tidyquant" width="200px"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <!--  <li class="nav-item"><a href="covid-19" class="nav-link">COVID-19</a></li> -->
+
+
+
+
+          <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="services" class="nav-link">Services</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Solutions</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown04">
+              <a class="dropdown-item" href="../solutions=IoTSolutions">IoT Solutions</a>
+              <a class="dropdown-item" href="../solutions=AISolutions">AI Solutions</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="about" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="career" class="nav-link">Careers</a></li>
+          <li class="nav-item"><a href="blog" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="workshop" class="nav-link">Workshop</a></li>
+          <li class="nav-item cta"><a href="contact" class="nav-link"><span>Get in touch</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+
+  <!-- <div class="js-fullheight"> -->
+  <div class="hero-wrap js-fullheight">
+    <div class="overlay"></div>
+    <div id="particles-js"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+        <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+          <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong>We tidy up your Big
+              Data using</strong></h1><br>
+          <h1 class="ml4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span
+              class="letters letters-1">Artificial Intelligence</span>
+            <span class="letters letters-2">Internet of Things</span>
+            <span class="letters letters-3">Machine Learning</span>
+            <span class="letters letters-4">Big Data</span>
+            <span class="letters letters-5">Data Pipelines</span>
+            <span class="letters letters-6">Cloud Computing</span>
+            <span class="letters letters-7">Neural Network</span>
+            <span class="letters letters-8">Cloud Architecture</span>
+            <span class="letters letters-9">Deep Learning</span>
+            <span class="letters letters-10">Text Mining</span>
+            <span class="letters letters-11">Natural Language Processing</span>
+            <span class="letters letters-12">Computer Vision</span>
+            <span class="letters letters-13">Text-to-Speech</span>
+          </h1><br><br><br>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div><br><br><br><br><br><br><br><br><br>
+
+
+    <!-- service card section -->
+    <section class="ftco-section-featured ftco-animate">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5 ">
+          <div class="col-md-6 text-center heading-section ftco-animate"><br>
+            <h2><strong>Our Services</strong></h2>
+            <p>Leverage best practices and accelerators for data engineering, data analytics, cloud adoption,
+              implementation and ROI</p>
+          </div>
+        </div>
+
+        <div class="row broder">
+
+          <div class="col-md-6 col-lg-3 d-flex  ftco-animate d-flex justify-content-center align-items-center">
+            <div class="media block-6 services d-block text-center mt-5 custom-shadow ">
+              <div class="d-flex justify-content-center">
+                <div class="icon color-3 d-flex justify-content-center service-img "><img src="images\strategy.png"
+                   alt="pipe" width="60%"></div>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">End-to-End Data Pipeline</h3>
+                <p>Data Ingestion is the process of absorbing data and importing it into a database either for...</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate ">
+            <div class="media block-6 services d-block text-center mt-5 custom-shadow">
+              <div class="d-flex justify-content-center service-img">
+                <div class="icon color-1 d-flex justify-content-center mb-3"><img src="images/gdpr.png" width="60%">
+                </div>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">Data Security &amp; GDPR Compliance</h3>
+                <p>Data is an invaluable asset to a business, however only when the data is governed properly...</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate ">
+            <div class="media block-6 services d-block text-center mt-5 custom-shadow">
+              <div class="d-flex justify-content-center service-img">
+                <div class="icon color-2 d-flex justify-content-center mb-3"><img src="images/visualize.png"
+                    width="60%"></div>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">Data Visualization &amp; Analytics</h3>
+                <p>Data visualization is an invaluable form of presenting data, which is accessible to...</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate ">
+            <div class="media block-6 services d-block text-center mt-5 custom-shadow">
+              <div class="d-flex justify-content-center service-img">
+                <div class="icon color-4 d-flex justify-content-center mb-3"><img src="images/analytics.png"
+                    width="60%"></div>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">Operational<br>Analytics</h3>
+                <p> is the application of data analytics, with the objective of optimising and improving a...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <span><a href="services" class="btn btn-primary py-3 px-5">Read More</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- service card section -->
+
+  </div><br>
+
+
+  <section class="ftco-section testimony-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-5">
+        <div class="col-md-7 text-center heading-section ftco-animate">
+          <span class="subheading">Testimonials</span>
+          <h2 class="mb-4">Our Happy Clients</h2>
+        </div>
+      </div>
+      <div class="row ftco-animate">
+        <div class="col-md-12">
+          <div class="carousel-testimony owl-carousel ftco-owl" id="owl-carousel">
+            <div class="item text-left">
+              <div class="testimony-wrap p-4 pb-5 position-relative">
+                <img src="../images/quote.png" width="30px" style="float: left;"><br>
+                <div class="text post position-relative" style="padding-left: 2em;">
+                  <h6 style="color: #515596; line-height: 1.2; font-size: 16px; font-weight: 600;">Horse racing
+                    predictive model development using machine learning/AI</h6>
+                  <p class="content" style="color: #7f7f7f;"><br>Absolutely brilliant! Highly recommended. Tidyquant went above and
+                    beyond for this project. Team has great knowledge of the AI/ML space, meets deadlines that they
+                    promised and communicated very well. I will continue to work with them for a long time. <br></p>
+
+                    <button class="btn btn-primary py-2 px-2" onclick="readMore(this)">Read More</button>
+                  </div>
+                  <div class="d-flex flex-column client-card-footer">
+                    <h3><img class="image" src="../images/client_logo/2.png" width="130px" style="float: right;"></h3>
+                    <h6 style="text-align: right; color: #7f7f7f; font-size: 14px;">Australia</h6>
+                  </div>
+              </div>
+            </div>
+
+            <div class="item text-left">
+              <div class="testimony-wrap p-4 pb-5">
+                <img src="../images/quote.png" width="30px" style="float: left;"><br>
+                <div class="text post" style="padding-left: 2em;">
+                  <h6 style="color: #515596; line-height: 1.2; font-size: 16px; font-weight: 600;">AWS architect needed
+                    to set up AWS ETL pipeline</h6>
+                  <p class="content" style="color: #7f7f7f;"><br>The Tidyquant team was very proactive not only on building out our
+                    requirements to spec, they also anticipated future needs based on the business use cases,
+                    recommended new potential capabilities they could deliver, and planned the architecture in such a
+                    way to reduce accruing technical debt in the process. <br></p>
+                    <button class="btn btn-primary py-2 px-2" onclick="readMore(this)">Read More</button>                 
+                </div>
+                <div class="d-flex flex-column client-card-footer">
+                  <h3><img class="image" src="../images/client_logo/3.png" width="130px" style="float: right;"></h3>
+                  <h6 style="text-align: right; color: #7f7f7f; font-size: 14px;">USA</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="item text-left">
+              <div class="testimony-wrap p-4 pb-5">
+                <img src="../images/quote.png" width="30px" style="float: left;"><br>
+                <div class="text post" style="padding-left: 2em;">
+                  <h6 style="color: #515596; line-height: 1.2; font-size: 16px; font-weight: 600;">Air Quality
+                    Prediction model deployment over AWS</h6>
+                  <p class="content" style="color: #7f7f7f;"><br>Data solution looks really good, thanks very much for your work -
+                    really happy with how it’s all coming together so quickly! 
+                    
+                  
+                    <br></p>
+                    <button class="btn btn-primary py-2 px-2" onclick="readMore(this)">Read More</button>                  
+              
+                </div>
+                <div class="d-flex flex-column client-card-footer">
+                  <h6 style="text-align: right; color: #7d7d7d; font-size: 16px; font-weight: 600; line-height: 0em;">
+                    Andrews IT Limited</h6>
+                  <h6 style="text-align: right; color: #7f7f7f; font-size: 14px;">New Zealand</h6>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="item text-left">
+              <div class="testimony-wrap p-4 pb-5">
+                <img src="../images/quote.png" width="30px" style="float: left;"><br>
+                <div class="text post" style="padding-left: 2em;">
+                  <h6 style="color: #515596; line-height: 1.2; font-size: 16px; font-weight: 600;">Data Engineering &
+                    Structuring</h6>
+                  <p class="content" style="color: #7f7f7f;"><br>Much thanks to Tidyquant team for the efforts on the project, it has
+                    been a good progress. <br></p>
+                    <button class="btn btn-primary py-2 px-2" onclick="readMore(this)">Read More</button>                  
+                
+                </div>
+
+                <div class="d-flex flex-column client-card-footer">
+                  <h3><img class="image" src="../images/client_logo/7.png" width="120px"
+                    style="float: right; line-height: 0em;"></h3>
+                <h6 style="text-align: right; color: #7f7f7f; font-size: 14px;">The United Kingdom</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="item text-left">
+              <div class="testimony-wrap p-4 pb-5">
+                <img src="../images/quote.png" width="30px" style="float: left;"><br>
+                <div class="text post" style="padding-left: 2em;">
+                  <h6 style="color: #515596; line-height: 1.2; font-size: 16px; font-weight: 600;">NLP (Natural Language
+                    Processing) project</h6>
+                  <p class="content" style="color: #7f7f7f;"><br>It was great working with Tidyquant. I highly recommend the team to
+                    anyone that needs help with NLP scripts.<br></p>
+                  
+                    <button class="btn btn-primary py-2 px-2" onclick="readMore(this)">Read More</button>                  
+             
+                </div>
+                <div class="d-flex flex-column client-card-footer">
+                  <h6 style="text-align: right; color: #7d7d7d; font-size: 16px; font-weight: 600; line-height: 0em;">
+                    Eduardo Antonio</h6>
+                  <h6 style="text-align: right; color: #7f7f7f; font-size: 14px;">Spain</h6>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+            <div class="item text-left">
+              <div class="testimony-wrap p-4 pb-5">
+                <img src="../images/quote.png" width="30px" style="float: left;"><br>
+                <div class="text post" style="padding-left: 2em;">
+                  <h6 style="color: #515596; line-height: 1.2; font-size: 16px; font-weight: 600;">Model development &
+                    Deployment in Python/R</h6>
+                  <p class="content" style="color: #7f7f7f;"><br>It was a pleasure to work with Tidyquant.  <br></p>
+                
+                  <button class="btn btn-primary py-2 px-2" onclick="readMore(this)">Read More</button>                  
+                  
+                </div>
+                <div class="d-flex flex-column client-card-footer">
+                  <h6 style="text-align: right; color: #7d7d7d; font-size: 16px; font-weight: 600; line-height: 0em;">
+                    Success Uni</h6>
+                  <h6 style="text-align: right; color: #7f7f7f; font-size: 14px;">The United Kingdom</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="item text-left">
+              <div class="testimony-wrap p-4 pb-5">
+                <img src="../images/quote.png" width="30px" style="float: left;"><br>
+                <div class="text post" style="padding-left: 2em;">
+                  <h6 style="color: #515596; line-height: 1.2; font-size: 16px; font-weight: 600;">ETL & Datawarehouse
+                    set up</h6>
+                  <p class="content" style="color: #7f7f7f;"><br>Amazing job - thank you!    <br></p>
+               
+                  <button class="btn btn-primary py-2 px-2" onclick="readMore(this)">Read More</button>                  
+                
+                </div>
+                <div class="d-flex flex-column client-card-footer">
+                  <h6 style="text-align: right; color: #7d7d7d; font-size: 16px; font-weight: 600; line-height: 0em;">
+                    Stephen Coulson</h6>
+                  <h6 style="text-align: right; color: #7f7f7f; font-size: 14px;">The United Kingdom</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="item text-left">
+              <div class="testimony-wrap p-4 pb-5">
+                <img src="../images/quote.png" width="30px" style="float: left;"><br>
+                <div class="text post" style="padding-left: 2em;">
+                  <h6 style="color: #515596; line-height: 1.2; font-size: 16px; font-weight: 600;">Horse racing
+                    prediction model development</h6>
+                  <p class="content" style="color: #7f7f7f;"><br>Tidyquant team has done an amazing job with our project. They have
+                    always given their time to listen to our ideas and questions and were also willing to assist by
+                      providing detailed answers and responses. I am extremely grateful to Tidyquant team and I would
+                      highly recommend them to anyone.<br></p>
+                  
+                      <button class="btn btn-primary py-2 px-2" onclick="readMore(this)">Read More</button>                  
+             
+                </div>
+                <div class="d-flex flex-column client-card-footer">
+                  <h6 style="text-align: right; color: #7d7d7d; font-size: 16px; font-weight: 600; line-height: 0em;">
+                    Matt May</h6>
+                  <h6 style="text-align: right; color: #7f7f7f; font-size: 14px;">Australia</h6>
+                </div>
+              </div>
+            </div>
+
+            <!--
+
+                <div class="item text-left">
+                  <div class="testimony-wrap p-4 pb-5">
+                    <img src="../images/quote.png" width="30px" style="float: left;"><br>
+                    <div class="text" style="padding-left: 2em;">
+                      <h6 style="color: #515596; line-height: 1.2; font-size: 16px; font-weight: 600;">AI Machine Learning Horse Race Prediction model in Python</h6>
+                      <p style="color: #7f7f7f;"><br>Absolutely brilliant! Highly recommended. Manoj went above and beyond for this task. He has great knowledge of the AI/ML space, meets deadlines that he promises and communicated very well. I will continue to work with him for a long time.</p>
+                      <br><h3><img class="image" src="../images/client_logo/2.png" width="130px" style="float: right;"></h3><br>
+                      <h6 style="text-align: right; color: #7f7f7f; font-size: 14px;">Australia</h6><br>                   
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item text-left">
+                  <div class="testimony-wrap p-4 pb-5">
+                    <img src="../images/quote.png" width="30px" style="float: left;"><br>
+                    <div class="text" style="padding-left: 2em;">
+                      <h6 style="color: #515596; line-height: 1.2; font-size: 16px; font-weight: 600;">AI Machine Learning Horse Race Prediction model in Python</h6>
+                      <p style="color: #7f7f7f;"><br>Absolutely brilliant! Highly recommended. Manoj went above and beyond for this task. He has great knowledge of the AI/ML space, meets deadlines that he promises and communicated very well. I will continue to work with him for a long time.</p>
+                      <br><h3><img class="image" src="../images/client_logo/2.png" width="130px" style="float: right;"></h3><br>
+                      <h6 style="text-align: right; color: #7f7f7f; font-size: 14px;">Australia</h6><br>                   
+                    </div>
+                  </div>
+                </div>
+
+                -->
+
+            <div class="item text-left">
+              <div class="testimony-wrap p-4 pb-5">
+                <img src="../images/quote.png" width="30px" style="float: left;"><br>
+                <div class="text post" style="padding-left: 2em;">
+                  <h6 style="color: #515596; line-height: 1.2; font-size: 16px; font-weight: 600;">App development &
+                    deployment over AWS Sagemaker</h6>
+                  <p class="content" style="color: #7f7f7f;"><br>Project was done as per our expectation. Surely, we are going to engage
+                    Tidyquant again very soon. <br></p>
+                    <button class="btn btn-primary py-2 px-2" onclick="readMore(this)">Read More</button>                  
+                 
+                </div>
+                <div class="d-flex flex-column client-card-footer">
+                  <h3><img class="image" src="../images/client_logo/4.png" width="130px" style="float: right;"></h3>
+                  <h6 style="text-align: right; color: #7f7f7f; font-size: 14px;">Canada</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- portfolio section -->
+
+
+<!-- portfolio section -->
+
+  <br><br><br><br><br><br><br><br><br><br>
+  <section class="ftco-section-featured ftco-animate">
+    <div class="container">
+      <div class="row justify-content-center ">
+        <div class="col-md-7 text-center heading-section ftco-animate">
+          <h2><strong>Industries We Help</strong></h2>
+        </div>
+      </div>
+
+
+      <div class="row mbr-justify-content-center">
+
+        <div class="col-lg-6 mbr-col-md-10">
+          <div class="wrap">
+            <div class="ico-wrap">
+              <img src="images/ins/finance.png">
+            </div>
+            <div class="text-wrap vcenter">
+              <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Banking &amp; Insurance</h2>
+              <p class="mbr-fonts-style text1 mbr-text display-6">Insightful solutions for Banks, NBFCs and Insurance to
+                predict and avoid fraudelent customer transactions.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mbr-col-md-10">
+          <div class="wrap">
+            <div class="ico-wrap">
+              <img src="images/ins/health.png">
+            </div>
+            <div class="text-wrap vcenter">
+              <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Healthcare
+              </h2>
+              <p class="mbr-fonts-style text1 mbr-text display-6">Machine and Deep learning driven predictive
+                precautionary solutions to safeguard users against serious illnesses.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mbr-col-md-10">
+          <div class="wrap">
+            <div class="ico-wrap">
+              <img src="images/ins/real.png">
+            </div>
+            <div class="text-wrap vcenter">
+              <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Real Estate</h2>
+              <p class="mbr-fonts-style text1 mbr-text display-6">Leveraging AI and IOT for rental prediction solutions
+                and power saver smart home devices.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mbr-col-md-10">
+          <div class="wrap">
+            <div class="ico-wrap">
+              <img src="images/ins/retail.png">
+            </div>
+            <div class="text-wrap vcenter">
+              <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Retail</h2>
+              <p class="mbr-fonts-style text1 mbr-text display-6">Insightful end to end POS data anayltics and product
+                recommendation solutions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mbr-col-md-10">
+          <div class="wrap">
+            <div class="ico-wrap">
+              <img src="images/ins/manu.png">
+            </div>
+            <div class="text-wrap vcenter">
+              <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Manufacturing</h2>
+              <p class="mbr-fonts-style text1 mbr-text display-6">Data driven analytical solutions to reduce overhead
+                costs and increased profit margins.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mbr-col-md-10">
+          <div class="wrap">
+            <div class="ico-wrap">
+              <img src="images/ins/cities.png">
+            </div>
+            <div class="text-wrap vcenter">
+              <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Smart Cities</h2>
+              <p class="mbr-fonts-style text1 mbr-text display-6">Leveraging sensor data, CCTV cameras and traffic
+                intersection camera data to develop solutions aimed at creating smart cities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row no-gutters justify-content-center">
+        <div class="col-md-7 text-center heading-section ftco-animate">
+          <span class="subheading">Solutions</span>
+          <h2 class="mb-4">Committed to Deliver State of Art AI Solutions</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
+          <a href="#" class="image custom-box-shadow" style="background-image: url('images/work-1.png');" data-scrollax=" properties: { translateY: '-20%'}">
+          </a>
+          <div class="text">
+            <a href="solutions=healthcare">
+              <h4 class="subheading">Healthcare</h4>
+            </a>
+            <h2 class="heading"><a href="healthcare">Tidycare - Predictive Healthcare App</a></h2>
+            <p style="text-align: justify;">Despite being no end to the debate that whether Machine Learning Solutions
+              can assist more effectively in diagnosing a critical illness or can give prediction for such happenings
+              with some acceptable accuracy, it’s no more a secret that research organization and healthcare
+              establishments are actually have taken an acceptable stance to...</p>
+            <p><a href="healthcare" class="btn btn-primary px-4">Read More</a></p>
+          </div>
+        </div>
+        <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
+          <a href="tidymatics" class="image image-2 order-2 custom-box-shadow" style="background-image: url('images/work-2.png');" data-scrollax=" properties: { translateY: '-20%'}"></a>
+          <div class="text order-1">
+            <a href="solutions=automobile">
+              <h4 class="subheading">Automobiles</h4>
+            </a>
+            <h2 class="heading"><a href="tidymatics">Tidymatics</a></h2>
+            <p style="text-align: justify;">With exponential increase in fuel price over the last decade, stakeholders
+              of most of the logistics companies and fleet services have been struggling to bring their operational cost
+              down, reducing occupational road risks (which contributes to accidents) and real time tracking of their
+              fleet. But, thanks to data science and GPS technology...</p>
+            <p><a href="tidymatics" class="btn btn-primary px-4">Read More</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
+        <a href="#" class="image custom-box-shadow" style="background-image: url('images/work-8.png');" data-scrollax=" properties: { translateY: '-20%'}">
+        </a>
+        <div class="text">
+          <a href="solutions=realestate">
+            <h4 class="subheading">Real Estate</h4>
+          </a>
+          <h2 class="heading"><a href="tidybox">Tidybox - An Affordable Smart Home For All</a></h2>
+          <p style="text-align: justify;">As the Smart home technology continues to boom, people are more interesting in
+            converting their usual home to a smart home. The word 'Smart' has been utilized in different fields and is
+            broadly acknowledged to mean Intelligence. The Smart home device, one of the delegates developing
+            technologies in the IoT time, has changed house equipment...</p>
+          <p><a href="tidybox" class="btn btn-primary px-4">Read More</a></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <span><a href="solutions" class="btn btn-primary py-3 px-5">View All Solutions</a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="ftco-section ftco-counter" id="section-counter">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-5">
+        <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+          <h2>Our Achievements</h2>
+          <p style="font-weight: 600;">Leverage best practices and accelerators for data engineering, data analytics,
+            cloud adoption, implementation and ROI</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 text-center">
+            <div class="text">
+              <strong class="number" data-number="5000">1000</strong><strong class="number">+</strong>
+              <span>Man Hours Experience Over Cloud Infrastructure</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 text-center">
+            <div class="text">
+              <strong class="number" data-number="500">100</strong><strong class="number">+</strong>
+              <span>AI Solutions Delivered</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 text-center">
+            <div class="text">
+              <strong class="number" data-number="50">0</strong><strong class="number">+</strong>
+              <span>Happy Clients</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-5">
+        <div class="col-md-7 text-center heading-section ftco-animate">
+          <h2>Blog</h2>
+          <p style="font-size: 14px; font-weight: 600;">In course of our existence of last two years, we at Tidyquant
+            have managed to develop several AI solutions aimed at helping healthcare, logistics, e-commerce, retail &
+            banking sector</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 ftco-animate">
+          <div class="blog-entry" data-aos-delay="200">
+            <a href="blogchurn" class="block-20" style="background-image: url('images/blogchurn.png');">
+            </a>
+            <div class="text p-4">
+              <div class="meta mb-3">
+                <div><a href="#">Tidyquant</a></div>
+              </div>
+              <h3 class="heading"><a href="blogchurn">Customer Churn Analysis</a></h3>
+              <p>In the age of Fierce Competition, most of the companies are ignorant of the fact that customer
+                retention is a key...</p>
+              <p><a href="blogchurn" class="btn btn-primary px-4">Read More</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <div class="blog-entry">
+            <a href="blogcloud" class="block-20" style="background-image: url('images/blog1.png');">
+            </a>
+            <div class="text p-4 d-block">
+              <div class="meta mb-3">
+                <div><a href="#">Tidyquant</a></div>
+              </div>
+              <h3 class="heading"><a href="blogcloud">Cloud based Data Warehouse</a></h3>
+              <p>This project was done by Tidyquant to develop an end-to-end data pipeline for an American credit card
+                company. The client has...</p>
+              <p><a href="blogcloud" class="btn btn-primary px-4">Read More</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <div class="blog-entry" data-aos-delay="100">
+            <a href="blognlp" class="block-20" style="background-image: url('images/blog2.png');">
+            </a>
+            <div class="text p-4">
+              <div class="meta mb-3">
+                <div><a href="#">Tidyquant</a></div>
+              </div>
+              <h3 class="heading"><a href="blognlp">NLP Model for Text Mining</a></h3>
+              <p>This exciting project was all about building an in-house data warehouse through remote access to
+                client's server for the...</p>
+              <p><a href="blognlp" class="btn btn-primary px-4">Read More</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section-parallax">
+    <div class="parallax-img d-flex align-items-center">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+            <h2 class="h1"><strong class="px-3">Subscribe to our Newsletter</strong></h2>
+            <h6 style="color: white;">Stay Glued...</h6>
+            <div class="row d-flex justify-content-center mt-5">
+              <div class="col-md-6">
+                <form action="#" class="subscribe-form">
+                  <div class="form-group">
+                    <span class="icon icon-paper-plane"></span>
+                    <input type="email" class="form-control" placeholder="Enter email address">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2"><img src="images/logo.png" alt="Tidyquant Logo" width="150px"></h2>
+            <p>We provide end to end solutions using ingestion and integration technologies to unearth your big data
+              locked away in silos. Our goal is to take the data that you have stored away and unlock the keys to your
+              success.</p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+              <li class="ftco-animate"><a href="https://twitter.com/tidyquant" target="_blank"><span
+                    class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.facebook.com/tidyquantUK/" target="_blank"><span
+                    class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="https://in.linkedin.com/company/tidyquant-ltd" target="_blank"><span
+                    class="icon-linkedin"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Quick Links</h2>
+            <ul class="list-unstyled">
+              <li><a href="services" class="py-2 d-block">Services</a></li>
+              <li><a href="solutions" class="py-2 d-block">Solutions</a></li>
+              <li><a href="workshop" class="py-2 d-block">Workshop</a></li>
+              <li><a href="career" class="py-2 d-block">Careers</a></li>
+              <li><a href="contact" class="py-2 d-block">Contact Us</a></li>
+              <li><a href="http://tidyquant-hr.site" target='_blank' class="py-2 d-block">Employee Portal</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Head Office</h2>
+            <ul class="list-unstyled">
+              <li><a href="https://maps.google.com/?ll=53.8506193,-1.8200492" class="py-2 d-block"><i
+                    class="fa fa-map-marker" aria-hidden="true"></i> West Yorkshire, United Kingdom</a></li>
+              <li><a href="skype:+441158881435?call" class="py-2 d-block"><i class="fa fa-skype" aria-hidden="true"></i>
+                  +44(0) 115 888 1435</a></li>
+              <li><a href="tel:+441274886654" class="py-2 d-block"><i class="fa fa-phone" aria-hidden="true"></i> +44(0)
+                  127 488 6654</a></li>
+              <li><a href="mailto:team@tidyqaunt.com" class="py-2 d-block"><i class="fa fa-envelope"
+                    aria-hidden="true"></i> team@tidyquant.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">India Office</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-2 d-block"><i class="fa fa-map-marker" aria-hidden="true"></i> 55, 2nd floor,
+                  Lane-2, Westend Marg, Saidullajab
+                  Near Saket Metro Station, New Delhi, Delhi 110030</a></li>
+              <li><a href="tel:01204330141" class="py-2 d-block"><i class="fa fa-phone" aria-hidden="true"></i> 0120 433
+                  0141</a></li>
+              <li><a href="tel:01204123644" class="py-2 d-block"><i class="fa fa-phone" aria-hidden="true"></i> 0120 412
+                  3644</a></li>
+              <li><a href="mailto:team@tidyqaunt.com" class="py-2 d-block"><i class="fa fa-envelope"
+                    aria-hidden="true"></i> team@tidyquant.com</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+
+          <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> <a href="https://tidyquant.com">Tidyquant Ltd</a>
+            | All rights reserved | <a href="privacy">Privacy & Policy</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+    <script>
+let noOfCharac = 50;
+let contents = document.querySelectorAll(".content");
+contents.forEach(content => {
+    //If text length is less that noOfCharac... then hide the read more button
+    if(content.textContent.length < noOfCharac){
+        content.nextElementSibling.style.display = "none";
+    }
+    else{
+        let displayText = content.textContent.slice(0,noOfCharac);
+        let moreText = content.textContent.slice(noOfCharac);
+        content.innerHTML = `${displayText}<span class="dots">...</span><span class="hide more">${moreText}</span>`;
+    }
+});
+
+function readMore(btn){
+    let post = btn.parentElement;
+  console.log(post);
+    post.querySelector(".dots").classList.toggle("hide");
+    post.querySelector(".more").classList.toggle("hide");
+    btn.textContent == "Read More" ? btn.textContent = "Read Less" : btn.textContent = "Read More";
+}
+
+    </script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/owl.autoplay.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/particles.min.js"></script>
+  <script src="js/particle.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/text.js"></script>
+  <script>
+
+
+
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+      setInterval(function() {
+        moveRight();
+      }, 3000);
+});
+  </script>
+</body>
+
+</html>
